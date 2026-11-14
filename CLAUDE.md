@@ -4,8 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-GitHub Pages user site (`riccardorampon.github.io`), a personal CV site. The repository is currently empty apart from `README.md`. No site generator, build tooling, tests, or linting have been chosen yet.
+GitHub Pages user site (`riccardorampon.github.io`), a personal CV site.
 
-GitHub Pages user sites are published from the default branch (`main`). With no generator configured, files are served as static content from the repo root (`index.html` is the entry point).
-
-Update this file once a stack (e.g. plain HTML, Jekyll, or a JS framework with a Pages deploy workflow) and its build/preview commands are in place.
+- Stack: plain `index.html` + `style.css` + `cv.pdf` at the repo root. No build step, no dependencies, no JavaScript.
+- Preview: open `index.html` in a browser.
+- Publishing: GitHub Pages serves the root of `main` as-is. Work happens on `develop`.
+- Adding a project: copy the commented card template in the Projects section of `index.html` into `div.cards` (remove the "Coming soon" card once a real one exists).
+- Privacy: never commit the phone number or date of birth. `docs/Developer_Resume.pdf` stays git-ignored; `cv.pdf` must be the redacted version.
+- Design spec and plans live in `docs/superpowers/specs/` and `docs/superpowers/plans/`.
